@@ -2,8 +2,8 @@
 <!-- flex items-center justify-center w-screen h-16 fixed bg-white z-10 -->
 <!-- flex w-max space-x-10 items-center -->
   <div>
-    <div v-if="!menuIsOpen">
-      <img src="icons/menu.svg" class="p-4" @click="toggleMenu()" />
+    <div v-if="!menuIsOpen" class="toggle-menu flex items-center ml-2">
+      <img src="icons/menu.svg" class="" @click="toggleMenu()" />
     </div>
     <div v-if="menuIsOpen" class="menu-container flex flex-col w-screen h-screen fixed md:h-16 md:flex-row md:z-10 md:justify-center">
       <img src="icons/close.svg" class="self-end text-white p-4 md:hidden xl:hidden" @click="toggleMenu()" />
@@ -44,7 +44,10 @@ export default Vue.extend({
 
 <style scoped>
 
-  .menu-container {  
+  .toggle-menu {
+    height: 10vh;
+  }
+  .menu-container { 
     background-color: #BF998A;
   }
 
